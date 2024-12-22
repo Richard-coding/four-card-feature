@@ -1,0 +1,130 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Poppins", serif;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-Light-Gray);
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1440px;
+}
+
+img {
+  display: block;
+}
+
+p {
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+}
+
+h2 {
+  color: var(--Very-Dark-Blue);
+}
+
+.column:nth-child(1) .flex-item:first-child {
+  border-top: 4px solid var(--Cyan);
+}
+.column:nth-child(2) .flex-item:first-child {
+  border-top: 4px solid var(--Red);
+}
+.column:nth-child(2) .flex-item:last-child {
+  border-top: 4px solid var(--Orange);
+}
+.column:nth-child(3) .flex-item:first-child {
+  border-top: 4px solid var(--Blue);
+}
+
+.about {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.about .title-one {
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--Very-Dark-Blue);
+}
+.about .title-two {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--Very-Dark-Blue);
+}
+
+.flex-container {
+  display: flex;
+  gap: 30px;
+}
+
+.column {
+  flex: 1;
+  align-self: center;
+  min-width: 0;
+}
+
+.flex-container img {
+  display: block;
+  margin-left: auto;
+}
+
+.flex-item {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+    section {
+      padding: 20px;
+      min-height: 100vh;
+    }
+  
+    main {
+      max-width: 600px;
+    }
+
+    .flex-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .column {
+      width: 100%;
+    }
+  
+    .about {
+      margin-bottom: 40px;
+    }
+  }
